@@ -1,5 +1,45 @@
 # Journal
 
+## 17 June 2026 - 3 hours
+Other than the Flight Computer, the entire project is in fact an autonomous drone.
+The goal of the drone is to be able to autononomously travel to GPS coordinates, as well as preform automatic landings using April Tag detection.
+This means I have to make a custom flight computer, frame, and fully custom firmware. I hope this project helps me break into the embeded space.
+
+To do this, I need to figure out how drones work specifically. Most drones use BLDC motors, which require specialized controllers (ESCs) to operate.
+ESC's are rated by amps, while most drone BLDC motors are rated by KV(RPM / Voltage). I need to find a capable yet affordable pair of these.
+Also, Lithium Polymer(LiPo) batteries are typically used to power these setups. They are typically measured in the amount of 3.3v cells (s), and a C rating.
+C ratings when multiplied by the amount of Amp-Hours(Ah) a battery has, yeilds the maximum safe amount of current they can discharge.
+
+I don't need much power, so a 3S (11.1v nominal) archetecture will work fine for now.
+I often find people using 1000 kv motors for drones at this scale, so I did the math:
+
+1000 KV * 11.1 V = 11,100 RPM
+
+This sounds prety promising, but what about the current it draws? Although this is dependent on the load that is driving, typically people report 15 to 20 amps.
+If I purchase 4x 20A ESC's, I'd be drawing about 100 amps, which is a ridiculous number to think about. Assuming a common 3s 120c 2200 mAh battery:
+
+2200 mAh / 1000 = 2.2 Ah
+2.2 Ah * 120 C = 264 Amps
+
+264 Amps continuous is more than enough for something like this. It also allows room for upgradability in the future with more power hungry ESCs and motors.
+
+All this research leads to this current setup:
+ - 4x 20A ESC's
+ - 1x 3S 2200mAh 120C LiPo battery
+ - 4x 1000 KV drone motors
+ - 4x Compatible props
+
+Now, I went to try to come up with a cost estimate for such setup. I started first by looking for a LiPo battery.
+The best rate I could find that wasn't extremely sketchy was about $28 USD for a kit of two batteries.
+Then for motors, it was really hard to find a **real** rate on Aliexpress. Tons of welcome deals and buy one only scams.
+Issue is, I can't find anything that isn't welcome deal. And on top of that, most of those are buy one only.
+With that being said, at a rate of roughly 20 dollars for a motor+esc kit, that brings the total cost to about $80 USD.
+I realize though, that I can just buy multiple welcome deals to get a extremely cheap setup.
+
+Finally, I looked into Amazon pricing. And best to my luck, I found a $32 kit with free shipping that had four motors.
+
+Overall, I'd say the time was well spent doing the research I needed. I plan on 3D printing myself a custom frame using my 3D printer, so that won't be an issue.
+
 ## 16 June 2026 - 6 hours
 The goal today is to fully complete a schematic of the entire board. I began by updating KiCAD and setting up the MCU.
 Importing the STM32H723VGT6 made me realize how large the chip was, as well as the insane amount of pins avaliable.
