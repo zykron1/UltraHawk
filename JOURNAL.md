@@ -1,5 +1,15 @@
 # Journal
 
+## 16 June 2026 - 1 hour
+I went through the entire schematic and found footprints for each element. I had to go to LCSC and use a special tool to turn easyeda footprints into KiCad.
+Once I was done, I decided to check every footprint visually, and then imported it all into a pcb.
+
+![Footprints](images/footprint.png)
+
+Imported into a pcb:
+![PCB with no placement or routing](images/badpcb.png)
+![PCB with no placement or routing 3D model](images/3d.png)
+
 ## 17 June 2026 - 2 hours
 I decided to add a ton of GPIO just in case stuff is broken. I added an external SPI bus, an external UART, and an I2C bus.
 This should allow for expansion when I acquire a radio and/or a GPS module. I also needed to find a proper N-type MOSFET and wire it correctly.
