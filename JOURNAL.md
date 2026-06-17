@@ -48,13 +48,13 @@ I've done MCU schematics before, but STM32 is a new world for me, so I began loo
 In about an hour or so I got to the point that I had the MCU wired up to the USB-C connector with an external crystal.
 I then got a random 5V to 3.3V step down Linear Regulator to power the STM32 due to its high supply on LCSC.
 
-[Schematic](images/s1.png)
+![Schematic](images/s1.png)
 
 I then imported the BMI270 IMU and set up decoupling caps and data signal lines. I had some trouble understanding as the chip is designed for both I2C and SPI.
 I then spent about 20 minutes tidying my design and organizing everything into boxes for more clairity as well as simplifying unusual wiring.
 
 Then I realized, LCSC doesn't have any stock for the BMP390. Turns out like always, I ended up with another supply chain issue.
-[LCSC out of stock](images/bmp.png)
+![LCSC out of stock](images/bmp.png)
 Luckily for me, Bosch has developed a better barometer than the BMP390, the BMP581, which had adequete stock on LCSC.
 
 Finally, for the magnetometer, I decided to switch to the BMM150 thanks to its lower price, and at this rate all my sensors are made by Bosch.
@@ -64,7 +64,7 @@ Actually screw that, I'm sticking with the LIS3MDL magnetometer as its a pretty 
 
 Finally, for the part I'm dreading the most, the TPS56208. Its needed because it's job is to allow the flight computer to power on through just LiPo power.
 After tons of reading datasheets and careful wiring, I finally finished it. I'm still a bit unsure about it, but I did email TI and they were helpful last time.
-[Schematic](images/s2.png)
+![Schematic](images/s2.png)
 
 ## 15 June 2026 - 4 Hours
 The goal of this project is to develop a custom flight computer that can be used for custom autonomous drone and rocket operations.
