@@ -1,5 +1,27 @@
 # Journal
 
+## 16 June 2026 - 6 hours
+The goal today is to fully complete a schematic of the entire board. I began by updating KiCAD and setting up the MCU.
+Importing the STM32H723VGT6 made me realize how large the chip was, as well as the insane amount of pins avaliable.
+I've done MCU schematics before, but STM32 is a new world for me, so I began looking for tutorials for STM32 devboards.
+
+In about an hour or so I got to the point that I had the MCU wired up to the USB-C connector with an external crystal.
+I then got a random 5V to 3.3V step down Linear Regulator to power the STM32 due to its high supply on LCSC.
+
+I then imported the BMI270 IMU and set up decoupling caps and data signal lines. I had some trouble understanding as the chip is designed for both I2C and SPI.
+I then spent about 20 minutes tidying my design and organizing everything into boxes for more clairity as well as simplifying unusual wiring.
+
+Then I realized, LCSC doesn't have any stock for the BMP390. Turns out like always, I ended up with another supply chain issue.
+Luckily for me, Bosch has developed a better barometer than the BMP390, the BMP581, which had adequete stock on LCSC.
+
+Finally, for the magnetometer, I decided to switch to the BMM150 thanks to its lower price, and at this rate all my sensors are made by Bosch.
+It should be noted however, that the BMM150 is discontinued and will never be restocked again. I'm sure this will never become an issue in the future!
+
+Actually screw that, I'm sticking with the LIS3MDL magnetometer as its a pretty safe bet. It's also made by ST so drivers should be easy.
+
+Finally, for the part I'm dreading the most, the TPS56208. Its needed because it's job is to allow the flight computer to power on through just LiPo power.
+After tons of reading datasheets and careful wiring, I finally finished it. I'm still a bit unsure about it, but I did email TI and they were helpful last time.
+
 ## 15 June 2026 - 4 Hours
 The goal of this project is to develop a custom flight computer that can be used for custom autonomous drone and rocket operations.
 
@@ -55,7 +77,7 @@ Following similar philosophy to the IMU and Barometer solution, I ended up on th
 
 Power system:
 The STM32H7 chip, as well as most sensors all run on 3.3v logic, while ESC's and USB typically provide 5V.
-I decided to go with the LD1117S33TR following previous projects, and its well documented nature.
+I decided to go with the AMS117-3.3 following previous projects, and its well documented nature.
 
 However, for rocket's, I need a proper voltage regulator that can take LiPo input voltage and bring it down to 5 volts.
 Following suit with previous designs, I decided to choose the TPS56208 from Texas Instruments.

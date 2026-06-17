@@ -1,2 +1,2 @@
 # UltraHawk
-A custom flight computer designed for drones and flight computers.
+A custom fully autonomous drone designed to run custom firmware on a fully custom flight controller.
