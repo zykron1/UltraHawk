@@ -1,5 +1,14 @@
 # Journal
 
+## 17 June 2026 - 2 hours
+I decided to add a ton of GPIO just in case stuff is broken. I added an external SPI Bus as well as an external UART and I2C bus.
+This should allow for expansion when I aquire a radio and/or a GPS module. I also needed to find a proper N type mosfet and wire it correctly.
+This is because most rockets need to fire parachute ejection or motor re-light charges midflight, which can't be done through GPIO for obvious reasons.
+I chose the AOS AO3400A since it had **TONS** of stock.
+![1.1 million of stock](images/stock.png)
+
+I then added 6 PWM ports for support for hexacopters as well as began analyzing my design to find any obvious faults 
+
 ## 17 June 2026 - 3 hours
 Other than the Flight Computer, the entire project is in fact an autonomous drone.
 The goal of the drone is to be able to autononomously travel to GPS coordinates, as well as preform automatic landings using April Tag detection.
