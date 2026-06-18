@@ -1971,7 +1971,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:USB_C_Receptacle_USB2.0_14P"
+		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1990,7 +1990,7 @@
 					)
 				)
 			)
-			(property "Value" "USB_C_Receptacle_USB2.0_14P"
+			(property "Value" "USB_C_Receptacle_USB2.0_16P"
 				(at 0 19.685 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2022,7 +2022,7 @@
 					)
 				)
 			)
-			(property "Description" "USB 2.0-only 14P Type-C Receptacle connector"
+			(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2055,7 +2055,7 @@
 					)
 				)
 			)
-			(symbol "USB_C_Receptacle_USB2.0_14P_0_0"
+			(symbol "USB_C_Receptacle_USB2.0_16P_0_0"
 				(rectangle
 					(start -0.254 -17.78)
 					(end 0.254 -16.764)
@@ -2144,8 +2144,30 @@
 						(type none)
 					)
 				)
+				(rectangle
+					(start 10.16 -12.446)
+					(end 9.144 -12.954)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -14.986)
+					(end 9.144 -15.494)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
-			(symbol "USB_C_Receptacle_USB2.0_14P_0_1"
+			(symbol "USB_C_Receptacle_USB2.0_16P_0_1"
 				(rectangle
 					(start -10.16 17.78)
 					(end 10.16 -17.78)
@@ -2346,7 +2368,7 @@
 					)
 				)
 			)
-			(symbol "USB_C_Receptacle_USB2.0_14P_1_1"
+			(symbol "USB_C_Receptacle_USB2.0_16P_1_1"
 				(pin passive line
 					(at 0 -22.86 90)
 					(length 5.08)
@@ -2430,6 +2452,24 @@
 						)
 					)
 					(number "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -12.7 180)
+					(length 5.08)
+					(name "SBU1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2560,6 +2600,24 @@
 						)
 					)
 					(number "B7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -15.24 180)
+					(length 5.08)
+					(name "SBU2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2781,7 +2839,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Crystal_GND24"
+		(symbol "Device:Crystal"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -2792,25 +2853,23 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Y"
-				(at 3.175 5.08 0)
+				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "Crystal_GND24"
-				(at 3.175 3.175 0)
+			(property "Value" "Crystal"
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -2835,31 +2894,9 @@
 					)
 				)
 			)
-			(property "Description" "Four pin crystal, GND on pins 2 and 4"
+			(property "Description" "Two pin crystal"
 				(at 0 0 0)
 				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property private "KLC_S3.3" "The rectangle is not a symbol body but a graphical element"
-				(at 0 -12.7 0)
-				(show_name yes)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property private "KLC_S4.1" "Some pins are on 50mil grid to make the symbol small"
-				(at 0 -15.24 0)
-				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
@@ -2890,10 +2927,10 @@
 					)
 				)
 			)
-			(symbol "Crystal_GND24_0_1"
+			(symbol "Crystal_0_1"
 				(polyline
 					(pts
-						(xy -2.54 2.286) (xy -2.54 3.556) (xy 2.54 3.556) (xy 2.54 2.286)
+						(xy -2.54 0) (xy -1.905 0)
 					)
 					(stroke
 						(width 0)
@@ -2905,31 +2942,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 0) (xy -2.032 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -2.286) (xy -2.54 -3.556) (xy 2.54 -3.556) (xy 2.54 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -1.27) (xy -2.032 1.27)
+						(xy -1.905 -1.27) (xy -1.905 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -2952,31 +2965,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -3.81) (xy 0 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 -1.27) (xy 2.032 1.27)
+						(xy 1.905 -1.27) (xy 1.905 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -2986,8 +2975,20 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
-			(symbol "Crystal_GND24_1_1"
+			(symbol "Crystal_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 1.27)
@@ -3007,9 +3008,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -5.08 90)
+					(at 3.81 0 180)
 					(length 1.27)
-					(name "G"
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3017,43 +3018,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 1.27)
-					(hide yes)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6553,6 +6517,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:AMS1117-3.3"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7231,11 +7294,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_SPDT"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
+		(symbol "easyeda2kicad:TS-1088R-02026"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -7251,7 +7310,7 @@
 					)
 				)
 			)
-			(property "Value" "SW_SPDT"
+			(property "Value" "TS-1088R-02026"
 				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7261,18 +7320,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
+			(property "Footprint" "easyeda2kicad:SW-SMD_L3.9-W3.0-P4.45"
 				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7283,7 +7331,18 @@
 					)
 				)
 			)
-			(property "Description" "Switch, single pole double throw"
+			(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_XUNPU-TS-1088R-02026_C455280.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7294,8 +7353,8 @@
 					)
 				)
 			)
-			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
-				(at 0 0 0)
+			(property "LCSC Part" "C455280"
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -7305,10 +7364,11 @@
 					)
 				)
 			)
-			(symbol "SW_SPDT_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.4572)
+			(symbol "TS-1088R-02026_0_1"
+				(polyline
+					(pts
+						(xy -2.03 0) (xy -2.54 0)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -7319,7 +7379,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.651 0.254) (xy 1.651 2.286)
+						(xy -1.52 0.51) (xy 1.52 1.78)
 					)
 					(stroke
 						(width 0)
@@ -7330,8 +7390,8 @@
 					)
 				)
 				(circle
-					(center 2.032 2.54)
-					(radius 0.4572)
+					(center -1.52 0)
+					(radius 0.38)
 					(stroke
 						(width 0)
 						(type default)
@@ -7341,8 +7401,8 @@
 					)
 				)
 				(circle
-					(center 2.032 -2.54)
-					(radius 0.4572)
+					(center 1.52 0)
+					(radius 0.38)
 					(stroke
 						(width 0)
 						(type default)
@@ -7351,23 +7411,22 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "SW_SPDT_1_1"
-				(rectangle
-					(start -3.175 3.81)
-					(end 3.175 -3.81)
+				(polyline
+					(pts
+						(xy 2.03 0) (xy 2.54 0)
+					)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
-				(pin passive line
-					(at 5.08 2.54 180)
+				(pin unspecified line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "A"
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7382,10 +7441,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at -5.08 0 0)
+				(pin unspecified line
+					(at 5.08 0 180)
 					(length 2.54)
-					(name "B"
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7393,24 +7452,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7710,12 +7751,6 @@
 		(uuid "0c3be6f6-3f4b-455c-ad72-aa964b605013")
 	)
 	(junction
-		(at 54.61 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0ed7bf7c-0f88-4966-99fb-a4a0fce78981")
-	)
-	(junction
 		(at 76.2 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7738,6 +7773,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1dc83516-820b-467f-81b8-6b5090b99058")
+	)
+	(junction
+		(at 68.58 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2184f46c-c3bd-440d-8ce5-e95e18a35661")
 	)
 	(junction
 		(at 323.85 118.11)
@@ -7858,12 +7899,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "65a69ded-0418-4ced-b87d-cf30e1ee2b03")
-	)
-	(junction
-		(at 151.13 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "67e40d9e-5c6a-4285-a3f1-408e30e73a67")
 	)
 	(junction
 		(at 311.15 34.29)
@@ -8068,6 +8103,10 @@
 		(uuid "54953885-6843-428f-82bc-f1b6722bc3d4")
 	)
 	(no_connect
+		(at 246.38 55.88)
+		(uuid "5fdc73c8-62c4-4549-b8e6-89992bce05e7")
+	)
+	(no_connect
 		(at 246.38 172.72)
 		(uuid "5ffd3214-6d76-4add-9240-4681631aaaf7")
 	)
@@ -8078,6 +8117,10 @@
 	(no_connect
 		(at 224.79 93.98)
 		(uuid "b32f8f65-7b54-465a-a1df-c39e1a1879c6")
+	)
+	(no_connect
+		(at 246.38 58.42)
+		(uuid "b6d923dc-f8d7-4f92-97ec-dbbd91c99449")
 	)
 	(no_connect
 		(at 265.43 99.06)
@@ -8194,6 +8237,16 @@
 			(type default)
 		)
 		(uuid "0d92c2b7-7276-4ab8-b53b-6921a21fc842")
+	)
+	(wire
+		(pts
+			(xy 68.58 49.53) (xy 74.93 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "104adeaa-c625-4598-94ca-e0d46b5b3144")
 	)
 	(wire
 		(pts
@@ -8967,7 +9020,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 83.82) (xy 62.23 83.82)
+			(xy 43.18 83.82) (xy 62.23 83.82)
 		)
 		(stroke
 			(width 0)
@@ -9227,6 +9280,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 57.15) (xy 68.58 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e244d0d-d16c-4672-913e-72bd4125e023")
+	)
+	(wire
+		(pts
 			(xy 251.46 191.77) (xy 251.46 187.96)
 		)
 		(stroke
@@ -9377,16 +9440,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 77.47) (xy 54.61 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3e6f87e-638e-4b9e-97d4-007465376fa0")
-	)
-	(wire
-		(pts
 			(xy 200.66 36.83) (xy 200.66 31.75)
 		)
 		(stroke
@@ -9437,7 +9490,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 74.93) (xy 135.89 74.93)
+			(xy 135.89 74.93) (xy 157.48 74.93)
 		)
 		(stroke
 			(width 0)
@@ -9597,16 +9650,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 83.82) (xy 54.61 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db4735a1-de96-4cb5-a45e-1a3ebb99e49d")
-	)
-	(wire
-		(pts
 			(xy 298.45 83.82) (xy 298.45 85.09)
 		)
 		(stroke
@@ -9684,16 +9727,6 @@
 			(type default)
 		)
 		(uuid "e4401cc9-6ed1-4242-9cc7-01c1e0a3e0a6")
-	)
-	(wire
-		(pts
-			(xy 151.13 64.77) (xy 151.13 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5fda4c3-795f-4cfd-9ab8-b315da9d2acf")
 	)
 	(wire
 		(pts
@@ -9824,16 +9857,6 @@
 			(type default)
 		)
 		(uuid "f2e5b7ed-b6c2-41f0-bd65-4ad47ac49ab4")
-	)
-	(wire
-		(pts
-			(xy 157.48 74.93) (xy 151.13 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f37644e0-b7f4-484d-97d9-05549bd5da74")
 	)
 	(wire
 		(pts
@@ -10167,7 +10190,7 @@
 			)
 		)
 	)
-	(global_label "PWM1"
+	(global_label "PWM5"
 		(shape input)
 		(at 29.21 39.37 0)
 		(fields_autoplaced yes)
@@ -10311,9 +10334,9 @@
 			)
 		)
 	)
-	(global_label "3.3V"
+	(global_label "SPI2_SCK"
 		(shape input)
-		(at 151.13 64.77 90)
+		(at 135.89 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10321,9 +10344,9 @@
 			)
 			(justify left)
 		)
-		(uuid "2367ae11-6800-4b6c-982b-c992febd812c")
+		(uuid "26c29dc2-ef3e-4a70-a5d1-de1e56a1cfbc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.13 57.6724 90)
+			(at 147.8861 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10409,17 +10432,17 @@
 	)
 	(global_label "PYRO_3"
 		(shape input)
-		(at 135.89 168.91 0)
+		(at 74.93 130.81 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "3f6336a1-9ed1-483f-84fb-1e5d22e657aa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.0114 168.91 0)
+			(at 64.8086 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10427,7 +10450,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -10721,7 +10744,7 @@
 	)
 	(global_label "3.3V"
 		(shape input)
-		(at 57.15 46.99 180)
+		(at 58.42 49.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10731,7 +10754,7 @@
 		)
 		(uuid "629c7d5d-66ba-40ba-a1d1-b1446c059385")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 50.0524 46.99 0)
+			(at 51.3224 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11129,31 +11152,7 @@
 	)
 	(global_label "MAG_CS"
 		(shape input)
-		(at 74.93 110.49 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "99271cfc-1625-448c-af3c-a90ac1e99d6b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.6877 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "PYRO_2"
-		(shape input)
-		(at 135.89 166.37 0)
+		(at 135.89 115.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11161,9 +11160,9 @@
 			)
 			(justify left)
 		)
-		(uuid "9a9d4e63-d392-4680-a56f-b5fa784e7885")
+		(uuid "99271cfc-1625-448c-af3c-a90ac1e99d6b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.0114 166.37 0)
+			(at 146.1323 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11172,6 +11171,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "PYRO_2"
+		(shape input)
+		(at 74.93 133.35 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9a9d4e63-d392-4680-a56f-b5fa784e7885")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 64.8086 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -11247,7 +11270,7 @@
 			)
 		)
 	)
-	(global_label "PWM4"
+	(global_label "PWM2"
 		(shape input)
 		(at 29.21 85.09 0)
 		(fields_autoplaced yes)
@@ -11489,17 +11512,17 @@
 	)
 	(global_label "PYRO_1"
 		(shape input)
-		(at 135.89 163.83 0)
+		(at 74.93 135.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "bb101e92-8f93-4985-882b-e3a4e0482ec1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.0114 163.83 0)
+			(at 64.8086 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11507,7 +11530,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -11585,31 +11608,7 @@
 	)
 	(global_label "BARO_CS"
 		(shape input)
-		(at 74.93 105.41 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c072676a-fe4a-47ac-bccf-7f5652256a23")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 63.5386 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "SPI2_SCK"
-		(shape input)
-		(at 135.89 113.03 0)
+		(at 135.89 120.65 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11617,9 +11616,9 @@
 			)
 			(justify left)
 		)
-		(uuid "c097a832-6dc7-404d-bc07-b215d507eb23")
+		(uuid "c072676a-fe4a-47ac-bccf-7f5652256a23")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.8861 113.03 0)
+			(at 147.2814 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11943,7 +11942,7 @@
 			)
 		)
 	)
-	(global_label "PWM5"
+	(global_label "PWM1"
 		(shape input)
 		(at 29.21 99.06 0)
 		(fields_autoplaced yes)
@@ -12015,7 +12014,7 @@
 			)
 		)
 	)
-	(global_label "PWM2"
+	(global_label "PWM4"
 		(shape input)
 		(at 29.21 53.34 0)
 		(fields_autoplaced yes)
@@ -12156,6 +12155,133 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:USB_C_Receptacle_USB2.0_16P")
+		(at 261.62 43.18 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "027f663b-e6b7-4dbd-887c-55e0d509ba36")
+		(property "Reference" "J1"
+			(at 249.428 20.828 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "USB_C_Receptacle_USB2.0_16P"
+			(at 249.428 23.368 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+			(at 257.81 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(at 257.81 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
+			(at 261.62 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "A12"
+			(uuid "fafe7c7f-f86d-4a7d-9b31-8927fd3b2ed9")
+		)
+		(pin "A5"
+			(uuid "a8f6b947-d818-4f08-ac90-d72ebd6f2d4f")
+		)
+		(pin "B6"
+			(uuid "86acdcb9-d790-4369-8dd1-75bc344ac7ee")
+		)
+		(pin "B4"
+			(uuid "801cea85-ceda-4d77-8102-74b563c7396d")
+		)
+		(pin "A6"
+			(uuid "c90caab1-69e0-4d0d-85a5-beff8bf91b22")
+		)
+		(pin "A9"
+			(uuid "e9d1950a-8e18-4c91-b4ae-4558ae40c25b")
+		)
+		(pin "B1"
+			(uuid "261bb4ac-0966-49dc-8f96-db7dbc947910")
+		)
+		(pin "B5"
+			(uuid "3496fd23-723c-4e7a-8687-a37b0e2a03ff")
+		)
+		(pin "B8"
+			(uuid "46ed567a-a61f-45eb-a110-d0b05b136efe")
+		)
+		(pin "A8"
+			(uuid "d445fff8-c489-4836-85b6-0f4358abe8bc")
+		)
+		(pin "B7"
+			(uuid "b44a583f-4975-48e3-8b6b-a3e81f1222b6")
+		)
+		(pin "B12"
+			(uuid "b2b6b820-8e9b-4002-bfff-ddf78772adfc")
+		)
+		(pin "SH"
+			(uuid "719a53fc-c02f-48ae-89d3-792df3735f89")
+		)
+		(pin "A1"
+			(uuid "e138887a-7fee-4729-94e8-3405ee516044")
+		)
+		(pin "B9"
+			(uuid "a7db783b-0e96-4ab0-8247-c3739b2a234e")
+		)
+		(pin "A7"
+			(uuid "6aa1a0ae-0ca1-4b2b-862d-9cf875dca354")
+		)
+		(pin "A4"
+			(uuid "9fe9fc70-c06e-4593-a265-23cb664b8315")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "J1")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -12398,6 +12524,82 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 149.86 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07355c63-a2df-4341-a2a5-34d901813a05")
+		(property "Reference" "H3"
+			(at 152.4 181.6099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 152.4 184.1499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 149.86 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 149.86 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -12718,88 +12920,6 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 151.13 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1dba21ee-e9bc-4747-98d5-01994434cdcb")
-		(property "Reference" "R4"
-			(at 153.67 69.8499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1k5"
-			(at 153.67 72.3899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 149.352 71.12 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 151.13 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "98c82fb2-94b4-42e6-aa13-445a1e1fab19")
-		)
-		(pin "2"
-			(uuid "7c90812c-c2e7-461c-97a8-2beb5f430995")
-		)
-		(instances
-			(project "UltraHawk"
-				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
-					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -13834,127 +13954,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_C_Receptacle_USB2.0_14P")
-		(at 261.62 43.18 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3025cc1f-55db-4d76-a183-65ea21337fd1")
-		(property "Reference" "J1"
-			(at 250.698 20.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "USB_C_Receptacle_USB2.0_14P"
-			(at 250.698 22.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "easyeda2kicad:USB-C_SMD-TYPE-C-31-M-12_1"
-			(at 257.81 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
-			(at 257.81 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "USB 2.0-only 14P Type-C Receptacle connector"
-			(at 261.62 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "A12"
-			(uuid "1cb6dacb-bb1d-4d2d-a713-b6d06e6424c4")
-		)
-		(pin "B6"
-			(uuid "1b351dd8-1bc4-439f-8f07-5b4b90fe3e15")
-		)
-		(pin "B4"
-			(uuid "e38cb102-24e8-4bd4-836d-db6f3d927c8e")
-		)
-		(pin "A4"
-			(uuid "d1e197bb-8b8c-49ed-a0bb-dcfb92a61c06")
-		)
-		(pin "B12"
-			(uuid "ca8c2432-e5d6-435a-bc09-6a94c36b4624")
-		)
-		(pin "B1"
-			(uuid "4c114749-20d0-46c1-bef4-64114733bccc")
-		)
-		(pin "B5"
-			(uuid "2ba4e985-6cf0-4cff-8271-cfbc6ae6ea8e")
-		)
-		(pin "SH"
-			(uuid "6a45ab44-68b9-460d-9c89-ecf50c5d111d")
-		)
-		(pin "B9"
-			(uuid "395de5ca-9f51-4bf5-aee2-3171017e4022")
-		)
-		(pin "A7"
-			(uuid "70bc964a-4331-42b2-a30c-9641bc255de2")
-		)
-		(pin "A1"
-			(uuid "792af0dd-38f5-410f-86fc-4455cacbec09")
-		)
-		(pin "B7"
-			(uuid "effc4011-9e10-4ea4-954e-bf1e2ec8aeb9")
-		)
-		(pin "A5"
-			(uuid "b4ade3ff-c52d-40cb-b95d-f6d86f70e95b")
-		)
-		(pin "A9"
-			(uuid "a2b90058-bca6-4b54-bde2-bf61127cc150")
-		)
-		(pin "A6"
-			(uuid "2f501936-c2ed-4ea0-aff9-9de9343714fd")
-		)
-		(instances
-			(project "UltraHawk"
-				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 261.62 66.04 0)
 		(unit 1)
@@ -14366,6 +14365,85 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 59.69 128.27 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36053892-7943-43c4-a190-8c8d1fee5782")
+		(property "Reference" "#PWR042"
+			(at 53.34 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 55.88 128.2699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 59.69 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "92637001-8e93-4e9c-871b-b162c2188631")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -15117,7 +15195,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 71.12 49.53 90)
+		(at 68.58 53.34 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15128,27 +15206,29 @@
 		(fields_autoplaced yes)
 		(uuid "42129891-90d5-421a-b9f6-462432705f25")
 		(property "Reference" "R1"
-			(at 71.12 43.18 90)
+			(at 71.12 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Value" "10k"
-			(at 71.12 45.72 90)
+			(at 71.12 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 71.12 51.308 90)
+			(at 70.358 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15159,7 +15239,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 49.53 0)
+			(at 68.58 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15170,7 +15250,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 71.12 49.53 0)
+			(at 68.58 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15691,6 +15771,86 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 128.27 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f0cdaf9-dff9-4953-87b6-e8bb6952bfa7")
+		(property "Reference" "R17"
+			(at 71.12 121.92 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220"
+			(at 71.12 124.46 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 71.12 130.048 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "edc33465-bc7b-4a7b-8272-3a59c8e7f2cc")
+		)
+		(pin "1"
+			(uuid "9bad45fe-bfbb-4e55-9d41-fe25adaa6f98")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -17419,6 +17579,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 149.86 187.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81bdb547-8355-4624-a329-3dfd3507dd70")
+		(property "Reference" "H4"
+			(at 152.4 186.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 152.4 189.2299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 149.86 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 149.86 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 269.24 66.04 0)
 		(unit 1)
@@ -18029,6 +18265,177 @@
 		)
 	)
 	(symbol
+		(lib_id "easyeda2kicad:TS-1088R-02026")
+		(at 63.5 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a99daa1-f6f7-4816-beaf-4339218e8f5f")
+		(property "Reference" "SW1"
+			(at 63.5 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TS-1088R-02026"
+			(at 63.5 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:SW-SMD_L3.9-W3.0-P4.45"
+			(at 63.5 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_XUNPU-TS-1088R-02026_C455280.html"
+			(at 63.5 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C455280"
+			(at 63.5 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "822c2e66-c05d-4171-8fc4-79fc8ff8fc46")
+		)
+		(pin "1"
+			(uuid "58436c04-81e9-40e1-9bb4-20eaa6d37f78")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal")
+		(at 54.61 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d323e10-5fc1-4ff5-898c-3d246eb985b9")
+		(property "Reference" "Y1"
+			(at 54.61 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "16MHZ"
+			(at 54.61 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_HC49-U_Vertical"
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Two pin crystal"
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e5b76789-cfd8-4ccf-ac94-4429b09d8b46")
+		)
+		(pin "1"
+			(uuid "b3bb186f-95ca-42cf-959d-335e89b9f23c")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "Y1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 349.25 78.74 90)
 		(unit 1)
@@ -18502,197 +18909,6 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Crystal_GND24")
-		(at 54.61 72.39 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9b28546d-c136-4aa9-830d-a8291ba1f2c2")
-		(property "Reference" "Y1"
-			(at 54.61 63.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "16MHz"
-			(at 54.61 66.04 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
-			(at 54.61 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Four pin crystal, GND on pins 2 and 4"
-			(at 54.61 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property private "KLC_S3.3" "The rectangle is not a symbol body but a graphical element"
-			(at 54.61 85.09 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property private "KLC_S4.1" "Some pins are on 50mil grid to make the symbol small"
-			(at 54.61 87.63 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "6f86e5db-edb2-44dc-b36d-a7b98c6ba814")
-		)
-		(pin "1"
-			(uuid "42813545-d947-4b65-89da-63ce6f8edb75")
-		)
-		(pin "2"
-			(uuid "2054af9f-3b1c-49fc-b052-8ccab4f5dc1e")
-		)
-		(pin "4"
-			(uuid "59d63256-0fed-44f4-927c-8eeac3224f09")
-		)
-		(instances
-			(project "UltraHawk"
-				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
-					(reference "Y1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_SPDT")
-		(at 62.23 49.53 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a1237f09-3768-43a9-80f4-c30613596884")
-		(property "Reference" "SW1"
-			(at 62.23 40.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_SPDT"
-			(at 62.23 43.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad:SW-TH_SHOU-HAN_SS12D10G4"
-			(at 62.23 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Switch, single pole double throw"
-			(at 62.23 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e80eddcf-5c07-4b4c-8478-19dbedac7812")
-		)
-		(pin "3"
-			(uuid "83cdeb4e-e771-45ba-a581-c3544307279c")
-		)
-		(pin "2"
-			(uuid "eb871f14-580d-409f-865e-aef68b1f0474")
-		)
-		(instances
-			(project "UltraHawk"
-				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
-					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -19717,6 +19933,97 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 63.5 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cffcbe26-41c1-4444-a515-53ec08d3772d")
+		(property "Reference" "D2"
+			(at 61.9125 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GREEN"
+			(at 61.9125 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 63.5 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 63.5 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 63.5 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8f093fd3-2773-4a58-b617-b2ca71028bde")
+		)
+		(pin "1"
+			(uuid "a212b749-9add-4606-b3c7-4ff506bf18c2")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -20968,6 +21275,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 128.27 187.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5166932-f2a0-4d52-ac0e-6199d01ca4d1")
+		(property "Reference" "H1"
+			(at 130.81 186.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 130.81 189.2299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 128.27 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 128.27 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Magnetic:LIS3MDL")
 		(at 233.68 177.8 0)
 		(unit 1)
@@ -21566,7 +21949,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 57.15 52.07 0)
+		(at 66.04 57.15 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21577,7 +21960,7 @@
 		(fields_autoplaced yes)
 		(uuid "f1ebb06c-121e-4203-96a2-60cd388e754d")
 		(property "Reference" "#PWR06"
-			(at 57.15 58.42 0)
+			(at 59.69 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21588,7 +21971,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 57.15 57.15 0)
+			(at 64.77 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21598,7 +21981,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 57.15 52.07 0)
+			(at 66.04 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21609,7 +21992,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 52.07 0)
+			(at 66.04 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21620,7 +22003,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 57.15 52.07 0)
+			(at 66.04 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21872,6 +22255,82 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 128.27 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd36c0da-6cad-4ad1-aa41-f778611f96e3")
+		(property "Reference" "H2"
+			(at 130.81 181.6099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 130.81 184.1499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 128.27 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 128.27 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "H2")
 					(unit 1)
 				)
 			)
