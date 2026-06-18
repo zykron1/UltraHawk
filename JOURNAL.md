@@ -1,12 +1,29 @@
 # Journal
 
-## 16 June 2026 - 1 hour
+## 17 June 2026 - 7 hour
+After about 7 hours of work I finally managed to route the entire board. I had to learn a lot. I first began be realizing how bad my current pin choices were.
+Often SPI pins were too far apart, or just on the wrong side of the entire MCU. Once I got that down, I had to then go though the pain of placement.
+Originally, I began by placing everything, and then trying to route, but that quickly led to issues and a waste of a couple hours. I then pivoted to a mix.
+
+I placed down all large components first, before then adding sensors one by one, along with their decoupling capacitors. Then I setup power.
+I had to create large 5V, 3.3V, and GND rails that allowed power to reach all important areas of the entire board, while ensuring to avoid many vias.
+After all of this, I ended up with a fairly good board, but had to deal with DRC errors relating to the fact that the footprints of certain Bosch chips are tight.
+
+End result:
+
+![PCB fully routed](images/pcb1.png)
+![PCB 3D render](images/pcb2.png)
+
+I'm really proud of the result. I also asked on Reddit for help on analyzing my work and found no real large issues with the schematic.
+
+## 17 June 2026 - 1 hour
 I went through the entire schematic and found footprints for each element. I had to go to LCSC and use a special tool to turn easyeda footprints into KiCad.
 Once I was done, I decided to check every footprint visually, and then imported it all into a pcb.
 
 ![Footprints](images/footprint.png)
 
 Imported into a pcb:
+
 ![PCB with no placement or routing](images/badpcb.png)
 ![PCB with no placement or routing 3D model](images/3d.png)
 

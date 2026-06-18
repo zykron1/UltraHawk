@@ -10334,30 +10334,6 @@
 			)
 		)
 	)
-	(global_label "SPI2_SCK"
-		(shape input)
-		(at 135.89 67.31 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "26c29dc2-ef3e-4a70-a5d1-de1e56a1cfbc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.8861 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "PWM2"
 		(shape input)
 		(at 135.89 148.59 0)
@@ -10811,6 +10787,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "SPI2_SCK"
+		(shape input)
+		(at 135.89 113.03 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "75ebc8d2-0506-44a9-b989-eecb8d75243a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.8861 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
