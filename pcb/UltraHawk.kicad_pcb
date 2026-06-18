@@ -17393,7 +17393,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "ea5daac0-2156-4abc-ae34-fefe7f9c1e0b")
-		(at 61.0875 107 -90)
+		(at 61.25 106.3375 -90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R15"
@@ -19372,12 +19372,12 @@
 		(start 48 71.5)
 		(end 98 148.5)
 		(stroke
-			(width 0.2)
+			(width 0.05)
 			(type default)
 		)
 		(fill no)
-		(layer "F.Cu")
-		(uuid "266e350d-c8ae-4ed7-831e-997e5a29ad56")
+		(layer "Edge.Cuts")
+		(uuid "75df16ef-3a10-4ae6-a01f-f20abc3a2c56")
 	)
 	(segment
 		(start 59.5 124.75)
@@ -19476,14 +19476,6 @@
 		(uuid "201a7812-f433-4e65-8575-8146725d7c66")
 	)
 	(segment
-		(start 61.0875 106.0875)
-		(end 64.1125 106.0875)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "GND")
-		(uuid "2136928a-7112-4043-bbfc-7426ef093874")
-	)
-	(segment
 		(start 79.305 140.645)
 		(end 80 139.95)
 		(width 0.2)
@@ -19538,6 +19530,14 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "6217e2d7-67e9-4b0f-9378-da56d4bf2c96")
+	)
+	(segment
+		(start 61.25 106.0875)
+		(end 61.25 105.425)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "6d5cc137-ca85-4662-a008-d59860a7ba0d")
 	)
 	(segment
 		(start 68.45 134.5)
@@ -19650,6 +19650,14 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "e3bfd913-62ca-4c24-848f-f90916c133b3")
+	)
+	(segment
+		(start 61.25 106.0875)
+		(end 64.1125 106.0875)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "f0b48b72-cc9a-45eb-80c2-d1589223abbd")
 	)
 	(segment
 		(start 64.1125 106.0875)
@@ -20362,6 +20370,14 @@
 		(layer "F.Cu")
 		(net "Net-(J8-Pin_1)")
 		(uuid "95cbeec1-c69c-4cb1-9248-0d5b061429c6")
+	)
+	(segment
+		(start 61.25 108)
+		(end 61.25 107.25)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "PYRO_3")
+		(uuid "0dc05297-6a95-462d-a45f-559f1834bf32")
 	)
 	(segment
 		(start 69.01465 104.789352)
