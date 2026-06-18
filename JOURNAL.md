@@ -1,24 +1,24 @@
 # Journal
 
-## 17 June 2026 - 7 hour
-After about 7 hours of work I finally managed to route the entire board. I had to learn a lot. I first began be realizing how bad my current pin choices were.
-Often SPI pins were too far apart, or just on the wrong side of the entire MCU. Once I got that down, I had to then go though the pain of placement.
-Originally, I began by placing everything, and then trying to route, but that quickly led to issues and a waste of a couple hours. I then pivoted to a mix.
+## 17 June 2026 - 7 hours
+After about 7 hours of work, I finally managed to route the entire board. I had to learn a lot. I first began by realizing how bad my current pin choices were.
+Often, SPI pins were too far apart, or just on the wrong side of the entire MCU. Once I got that down, I had to go through the pain of placement.
+Originally, I began by placing everything and then trying to route, but that quickly led to issues and wasted a couple of hours. I then pivoted to a mix.
 
-I placed down all large components first, before then adding sensors one by one, along with their decoupling capacitors. Then I setup power.
+I placed down all large components first, before then adding sensors one by one, along with their decoupling capacitors. Then I set up power.
 I had to create large 5V, 3.3V, and GND rails that allowed power to reach all important areas of the entire board, while ensuring to avoid many vias.
 After all of this, I ended up with a fairly good board, but had to deal with DRC errors relating to the fact that the footprints of certain Bosch chips are tight.
 
-End result:
+Result:
 
 ![PCB fully routed](images/pcb1.png)
 ![PCB 3D render](images/pcb2.png)
 
-I'm really proud of the result. I also asked on Reddit for help on analyzing my work and found no real large issues with the schematic.
+I'm really proud of the result. I also asked on Reddit for help on analyzing my work and found no really large issues with the schematic.
 
 ## 17 June 2026 - 1 hour
-I went through the entire schematic and found footprints for each element. I had to go to LCSC and use a special tool to turn easyeda footprints into KiCad.
-Once I was done, I decided to check every footprint visually, and then imported it all into a pcb.
+I went through the entire schematic and found footprints for each element. I had to go to LCSC and use a special tool to turn EasyEDA footprints into KiCad.
+Once I was done, I decided to check every footprint visually and then imported it all into a PCB.
 
 ![Footprints](images/footprint.png)
 
@@ -112,7 +112,7 @@ I have had extremely negative situations with IMU and Barometer supply chain iss
 
 MCU selection:
 Although in my opinion the best MCUs for performance to dollar are Espressif Systems' ESP32 series, often, due to their large nature, they require expensive PCBA.
-When doing research on solutions from other people around the world, the STM32 series from STMicroelectronics always comes up, so I decided to do some research
+When researching solutions from other people around the world, the STM32 series from STMicroelectronics always comes up, so I decided to do some research
 
 ---
 
