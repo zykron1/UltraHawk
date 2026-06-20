@@ -1,0 +1,35 @@
+Designator,Footprint,Quantity,Value,LCSC Part #,Cost Per Unit,Cost,Note
+"C1, C11, C17, C18, C19, C2, C20, C21_2, C21, C23, C24, C3, C4, C5, C6, C27, C28",805,17,100n,C344180,$0.02,$0.35,Multiples of 10
+"C10, C14, C9",805,3,1u,C24123,$0.0195,$0.39,moq 20
+"C12, C13",805,2,34p,C3894194,$0.0017,$0.09,moq 50
+"C15, C16",805,2,22u,C602037,$0.1138,$1.14,moq 10
+C22,805,1,1uf,C28323,$0.0469,$0.94,moq 20
+"C25, C26",805,2,10µF,C1713,$0.0491,$0.98,moq 20
+"C29, C30",805,2,22µF,C5674,$0.07,$0.70,moq 10
+C7,805,1,10u,C17024,$0.04,$0.84,moq 20
+C8,805,1,10n,C1710,$0.01,$0.47,moq 50
+D1,805,1,RED,C84256,$0.01,$0.67,moq 50
+D2,805,1,GREEN,C5879267,$0.42,$0.42,no moq
+FB1,603,1,120R,C14709,$0.01,$0.74,moq 50
+J1,USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,USB_C_Receptacle_USB2.0_16P,C5184243,$1.17,$1.17,no moq
+"J10, J7, J8, J9",TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,4,Screw_Terminal_01x02,C5188434,$0.06,$0.62,moq 10
+"J11, J12, J13, J14, J15, J3",PinHeader_1x03_P2.54mm_Vertical,6,Conn_01x03_Pin,C2337,$0.16,$0.78,moq 5
+"J2, J4, J5",PinHeader_1x04_P2.54mm_Vertical,3,Conn_01x04_Pin,sharing from above,sharing from above,0,sharing from above
+J6,PinHeader_1x06_P2.54mm_Vertical,1,Conn_01x06_Pin,sharing from above,sharing from above,0,sharing from above
+L1,805,1,3.3uh,C18734461,$0.02,$0.12,moq 5
+"R1, R12, R13, R15, R6, R7",805,6,10k,C84376,$0.00,$0.38,moq 100
+"R10, R9",805,2,4.7k,C4176634,$0.01,$0.01,no moq
+"R11, R14, R16",805,3,100,C2907218,$0.00,$0.32,moq 100
+R17,805,1,220,C104105,$0.00,$0.26,
+"R2, R3",805,2,5.1k,C2930296,$0.00,$0.22,moq 100
+R5,805,1,1k5,C416128,$0.00,$0.26,moq 100
+R8,805,1,54.9k,C137510,$0.00,$0.28,moq 100
+SW1,SW-SMD_L3.9-W3.0-P4.45,1,TS-1088R-02026,C455280,$0.06,$0.60,moq 5
+U1,LQFP-100_14x14mm_P0.5mm,1,STM32H723VGTx,C730142,$6.99,$6.99,no moq
+U2,SOT-223-3_TabPin2,1,AMS1117-3.3,C6186,$0.20,$0.99,moq 5
+U3,BMI270_BOS,1,BMI270,C2836813,$4.15,$4.15,no moq
+U4,QFN10_BMP581_BOS,1,BMP581,C5362283,$4.31,$4.31,no moq
+U5,LGA-12_2x2mm_P0.5mm,1,LIS3MDL,C478483,$5.04,$5.04,no moq
+U6,SOT-23-6,1,TPS565208,C2650336,$0.44,$0.44,no moq
+"U7, U8, U9",SOT-23-3L_AOS,3,AO3400A,C20917,$0.08,$0.42,moq 5
+Y1,Crystal_HC49-U_Vertical,1,16MHZ,C326538,$0.53,$0.53,no moq

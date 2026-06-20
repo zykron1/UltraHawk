@@ -1,5 +1,23 @@
 # Journal
 
+## 12 June 2026 - 3 hours
+After exporting my design into JLCPCB, I only have bad news. Firstly, all the sensors that I chose require me to upgrade to standard PCBA, and not economic.
+Secondly, the prices are already insane, pushing 200 dollars, and with the cheapest possible shipping + tarrifs, I end up with a grand total of about $300.
+Lucky for me, I know someone who owns a SMD hot plate, so if I can just use the hack club funding to aquire myself the SMD components and the PCB I'm fine.
+
+I also received some advice on reddit about my design that I implemented. After that, I set out to find a LCSC part number for EVERY SINGLE PART on my board.
+This took about 1.5 hours, and then I had to verify that I hadn't made any mistakes. Once that was done, I had a rough estimate of about $40 of just parts.
+I'm hoping to get S tier for this project as its going to serve as a platform for building a fully custom autonomous drone platform with:
+
+ - custom firmware
+ - custom flight computer
+ - custom overall chasis/drone
+ - expandibility and usefulness for other makers
+
+This project will for now remain for autonomous drones, but with the large amount of added IO (SPI, UART, I2C), it should be possible to connect a radio and GPS.
+
+Once I made my finalizing edits I went to JLCPCB to calculate the total cost of getting a stencil and pcb.
+
 ## 17 June 2026 - 7 hours
 After about 7 hours of work, I finally managed to route the entire board. I had to learn a lot. I first began by realizing how bad my current pin choices were.
 Often, SPI pins were too far apart, or just on the wrong side of the entire MCU. Once I got that down, I had to go through the pain of placement.

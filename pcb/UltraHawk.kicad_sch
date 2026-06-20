@@ -7733,12 +7733,6 @@
 		(uuid "f506c259-8785-44ec-9d81-eb9ca7d40ce7")
 	)
 	(junction
-		(at 179.07 168.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "04c83e8b-c781-441d-84fa-6919bea76757")
-	)
-	(junction
 		(at 190.5 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7797,6 +7791,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2434f338-5c89-4766-af5a-07da42a0a490")
+	)
+	(junction
+		(at 190.5 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2baf344c-46ee-4936-9e31-747238301b5b")
 	)
 	(junction
 		(at 203.2 100.33)
@@ -8087,12 +8087,6 @@
 		(uuid "eb486fe4-ffbe-4466-b581-5338909f485a")
 	)
 	(junction
-		(at 191.77 176.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f17ee4cb-928b-4513-af03-a695fe1c0e8a")
-	)
-	(junction
 		(at 190.5 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8310,16 +8304,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 168.91) (xy 191.77 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d552fee-a757-46f6-ba2d-259a05eee68e")
-	)
-	(wire
-		(pts
 			(xy 149.86 95.25) (xy 139.7 95.25)
 		)
 		(stroke
@@ -8450,16 +8434,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 165.1) (xy 179.07 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26907db4-a7c9-429b-9fb5-49fea85b4418")
-	)
-	(wire
-		(pts
 			(xy 332.74 31.75) (xy 334.01 31.75)
 		)
 		(stroke
@@ -8497,6 +8471,16 @@
 			(type default)
 		)
 		(uuid "33706559-9fc3-4f1c-9bd5-3b8e6a511f46")
+	)
+	(wire
+		(pts
+			(xy 179.07 100.33) (xy 190.5 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3394412e-1fb0-4038-8310-003b0a155ab1")
 	)
 	(wire
 		(pts
@@ -8577,16 +8561,6 @@
 			(type default)
 		)
 		(uuid "40c57006-ff27-4769-b8c1-985e392bac3c")
-	)
-	(wire
-		(pts
-			(xy 179.07 176.53) (xy 191.77 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "437e711e-f460-41ae-8bdd-159bf4ccfea9")
 	)
 	(wire
 		(pts
@@ -9120,7 +9094,7 @@
 	)
 	(wire
 		(pts
-			(xy 332.74 35.56) (xy 332.74 31.75)
+			(xy 332.74 31.75) (xy 332.74 45.72)
 		)
 		(stroke
 			(width 0)
@@ -9360,16 +9334,6 @@
 	)
 	(wire
 		(pts
-			(xy 332.74 45.72) (xy 332.74 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5a0a67e-78b2-4f34-91e4-148dd675fdc7")
-	)
-	(wire
-		(pts
 			(xy 233.68 191.77) (xy 233.68 190.5)
 		)
 		(stroke
@@ -9567,6 +9531,16 @@
 			(type default)
 		)
 		(uuid "c9419725-f2d5-48db-8cdc-da9672b03c9d")
+	)
+	(wire
+		(pts
+			(xy 179.07 92.71) (xy 190.5 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c94ab913-1a84-49bc-9ab8-1e784a73b3c4")
 	)
 	(wire
 		(pts
@@ -10024,7 +9998,7 @@
 	)
 	(global_label "3.3V"
 		(shape input)
-		(at 179.07 165.1 90)
+		(at 191.77 168.91 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10034,7 +10008,7 @@
 		)
 		(uuid "027f0b02-bd0a-4a52-bd4c-e98fe86bb0ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.07 158.0024 90)
+			(at 191.77 161.8124 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13204,7 +13178,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "Footprint" "easyeda2kicad:IND-SMD_L5.8-W5.2"
 			(at 370.84 25.4 0)
 			(hide yes)
 			(show_name no)
@@ -15602,99 +15576,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 332.74 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4ea0db56-18e5-4d81-8a9b-21921768cc50")
-		(property "Reference" "R6"
-			(at 335.28 38.0999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 335.28 40.6399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 330.962 39.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 332.74 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 332.74 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 332.74 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "69b7204f-6833-40d0-9de0-781671d8b906")
-		)
-		(pin "2"
-			(uuid "d1773832-9564-48b3-b2d4-919fe951eecb")
-		)
-		(instances
-			(project "UltraHawk"
-				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 177.8 40.64 0)
 		(unit 1)
@@ -16131,7 +16012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "1uf"
 			(at 195.58 173.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17755,7 +17636,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "100n"
 			(at 368.3 30.4799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17900,6 +17781,88 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 179.07 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8592139a-b3f2-4715-b818-ccc62adbf58a")
+		(property "Reference" "C21"
+			(at 182.88 95.2499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 182.88 97.7899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 180.0352 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 179.07 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dd2fded7-91b3-427c-ae2b-633f1a02e6a8")
+		)
+		(pin "1"
+			(uuid "17b22a5a-6745-4b44-9aa3-9f525f7c26a2")
+		)
+		(instances
+			(project "UltraHawk"
+				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -19529,7 +19492,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "100n"
 			(at 326.39 31.7499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19714,7 +19677,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 144.78 29.972 90)
 			(hide yes)
 			(show_name no)
@@ -20805,7 +20768,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "1u"
 			(at 243.84 25.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20859,88 +20822,6 @@
 			(project "UltraHawk"
 				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
 					(reference "C14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 179.07 172.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dd888bef-6bb9-43e3-b245-5dabddaecbae")
-		(property "Reference" "C21"
-			(at 182.88 171.4499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 182.88 173.9899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 180.0352 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.07 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 179.07 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6c4321f4-6ea8-4550-8668-281e615e0433")
-		)
-		(pin "1"
-			(uuid "6fc0173e-f05d-4828-b71e-0b23dcb4dd60")
-		)
-		(instances
-			(project "UltraHawk"
-				(path "/7ae516a8-4098-4a5c-bc4d-968760362b3b"
-					(reference "C21")
 					(unit 1)
 				)
 			)
