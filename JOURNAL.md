@@ -1,6 +1,22 @@
 # Journal
 
-## 12 June 2026 - 3 hours
+# 21 June 2026 - 4 hours
+I completed perliminary CAD of my drone. I began by making a PCB tombstone mount, before then designing a top plate, and arms.
+![CAD Model of the Drone](images/CAD1.png)
+
+Here are some more detailed images.
+
+Here is the PCB mount:
+![CAD model of the pcb mount](images/CAD3.png)
+![CAD model of the pcb mount](images/CAD2.png)
+
+I decided to use a tombstone style mounting system rather than fully encasing the pcb properly. Here's a top view of the entire craft:
+
+![CAD model of the top view of the drone](images/CAD4.png)
+
+I'll work on the battery mount and software next, once I can get confirmation from LCSC that all my parts can be ordered.
+
+## 20 June 2026 - 3 hours
 After exporting my design into JLCPCB, I only have bad news. Firstly, all the sensors that I chose require me to upgrade to standard PCBA, and not economic.
 Secondly, the prices are already insane, pushing 200 dollars, and with the cheapest possible shipping + tarrifs, I end up with a grand total of about $300.
 Lucky for me, I know someone who owns a SMD hot plate, so if I can just use the hack club funding to aquire myself the SMD components and the PCB I'm fine.
