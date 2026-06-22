@@ -1,5 +1,18 @@
 # Journal
 
+# 21 June 2026 - 2 hours
+
+## Wrapping up loose ends.
+I began by first finalizing my pin choices, ensuring the pcb meets DRC rules, before then going to JLCPCB to get a quote, and building a final BOM.csv.
+I realized how sketchy the pricing model is, as changing my stencil size by a few milimeters resulted in far cheaper or expensive build costs and shipping fees.
+Once I got that done, the estimated quote was roughly $18.87. Let me do some budget math. Assuming the LCSC grand total is 50 dollars, that leaves $111.13 left.
+From that, I found a motor + prop + ESC kit on amazon for about $56 with free shipping. That leaves $55.13 left for purchasing batteries, chargers, and GPS.
+For optimal use, I decided to go with a 5200mAh battery which price about $35 dollars. That $20 dollars ish left, which I'd rather all invest into GPS than radio.
+
+![JLC pcb order](images/jlcquote.png)
+![3S Lipo Candidate](images/lipo.png)
+![Motor kit](images/motorkit.png)
+
 # 21 June 2026 - 4 hours
 I completed perliminary CAD of my drone. I began by making a PCB tombstone mount, before then designing a top plate, and arms.
 ![CAD Model of the Drone](images/CAD1.png)

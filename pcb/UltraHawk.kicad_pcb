@@ -7532,7 +7532,7 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "61266a88-24d6-4ab7-bddc-66c0dad8abac")
-		(at 53.85 100.5 180)
+		(at 53.85 100.7 180)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C21"
@@ -9606,11 +9606,11 @@
 	(footprint "easyeda2kicad:IND-SMD_L5.8-W5.2"
 		(layer "F.Cu")
 		(uuid "8a83be31-13c6-4d26-9549-0ec4ae04e4b7")
-		(at 77.8 121.3 180)
+		(at 78 121.3 180)
 		(property "Reference" "L1"
 			(at 0 -4 180)
 			(layer "F.SilkS")
-			(uuid "485d174b-9fdf-4d3b-8c73-900f16bdb08a")
+			(uuid "efde22ea-ad81-4bea-a904-7da0906c7414")
 			(effects
 				(font
 					(size 1 1)
@@ -9621,7 +9621,7 @@
 		(property "Value" "3.3uh"
 			(at 0 4 180)
 			(layer "F.Fab")
-			(uuid "a46e5f8a-beef-4324-bbea-c11a5175ef6d")
+			(uuid "eb8aeccc-97bf-4485-8d72-c95ea0f9de9b")
 			(effects
 				(font
 					(size 1 1)
@@ -9633,7 +9633,7 @@
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e9cfe077-7f7e-4625-942d-8d16f8aa7148")
+			(uuid "ac9763a4-48b8-46ee-96e1-2977f61ddf05")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9644,7 +9644,7 @@
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "12966ae6-dbd2-4e27-9423-6e038b986ac1")
+			(uuid "26a99c9d-7be6-4932-8363-4f59cbc840c8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9659,6 +9659,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -24574,6 +24575,14 @@
 		(uuid "24759f73-98a8-4138-903d-5ee1105e8d33")
 	)
 	(segment
+		(start 81.3625 137)
+		(end 80.700001 137)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "LIPO_HIGH")
+		(uuid "46a6e093-0b02-4a2f-a3e9-2587cbac866a")
+	)
+	(segment
 		(start 95.6 121.1)
 		(end 95.6 128.4)
 		(width 2)
@@ -25812,30 +25821,6 @@
 		(layer "F.Cu")
 		(net "3.3VA")
 		(uuid "98ee05b2-c778-4710-8c18-9032f432f1c9")
-	)
-	(segment
-		(start 81.3625 137)
-		(end 80.700001 137)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "Net-(U6-EN)")
-		(uuid "46a6e093-0b02-4a2f-a3e9-2587cbac866a")
-	)
-	(segment
-		(start 80.700001 137)
-		(end 80.2 137.500001)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "Net-(U6-EN)")
-		(uuid "8084cfd4-2bf7-4d94-a8a1-d0e6df4cfb65")
-	)
-	(segment
-		(start 80.2 137.500001)
-		(end 80.2 139.8875)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "Net-(U6-EN)")
-		(uuid "b269991a-6ccb-4940-8109-e1faee9c2c11")
 	)
 	(segment
 		(start 84.2975 102.29)
