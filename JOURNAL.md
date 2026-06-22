@@ -1,5 +1,9 @@
 # Journal
 
+## 21 June 2026 - 1 hour
+I wrote some basic arduino c++ style code that simply implements a PID loop which maintains orientation and attitude using the barometer and IMU.
+Realistitcally, for performance reasons I would have to rewrite this using the STM32 HAL and FreeRTOS or Zephyr. For now however, this should be enough to hover.
+
 # 21 June 2026 - 2 hours
 
 ## Wrapping up loose ends.
