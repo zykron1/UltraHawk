@@ -28,6 +28,7 @@ void setup () {
 	Wire.begin(6, 7);
 
 	imu.init(0x68);
+	Serial.begin(9600);
 
 	delay(100);
 	imu.calibrate(500, 10);
@@ -58,9 +59,22 @@ void loop () {
 		i = imu.getData();
 
 		estimate.updateState({i.gx, i.gy, i.gz}, 0.0f, actual_ms); 
-		Orientation o = estimate.getOrientation();
+		Orientation o = estimate.getOrientation() * RAD_TO_DEG;
 
-		TelemetryPacket telem = {packet_number, t, i.gx, i.gy, i.gz, i.ax, i.ay, i.az, o.x, o.y, o.z};
+		TelemetryPacket telem = {
+			packet_number,
+			t,
+			i.gx,
+			i.gy,
+			i.gz,
+			i.ax,
+			i.ay,
+			i.az,
+			o.x,
+			o.y,
+			o.z,
+			0,0,0
+		};
 
 		esp_now_send(broadcastAddress, (uint8_t*)&telem, sizeof(telem));
 		packet_number++;
