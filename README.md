@@ -1,5 +1,5 @@
 # UltraHawk
-A custom fully autonomous drone designed to run custom firmware on a fully custom flight controller.
+A custom fully autonomous drone designed to run custom firmware on a fully custom flight controller. It is capable of autonomously navigating to waypoints.
 
 ![drone](images/CAD1.png)
 
