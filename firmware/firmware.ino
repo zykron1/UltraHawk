@@ -12,7 +12,7 @@ enum States {
 	AUTON,
 };
 
-typedef struct {
+typedef struct __attribute__((packed)) {
 	size_t packet_number;
 	float missionTime;
 	States state;
@@ -21,7 +21,7 @@ typedef struct {
 	float x, y, z; // location
 } TelemetryPacket;
 
-typedef struct {
+typedef struct __attribute__((packed)) {
 	States state;
 	float thrust, roll, pitch, yaw; // if teleop
 	float xpos, ypos, zpos; // if auton
@@ -96,7 +96,6 @@ void loop () {
 			o.z,
 			0,0,0
 		};
-
 		esp_now_send(broadcastAddress, (uint8_t*)&telem, sizeof(telem));
 		packet_number++;
 	}
