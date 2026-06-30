@@ -19,18 +19,18 @@ void Drone::writeESC(int pin, uint16_t pulse_us) {
 }
 
 void Drone::writeMotors(int thrust, int roll, int pitch, int yaw) {
-	int m1Out = thrust + pitch + roll - yaw;
-	int m2Out = thrust + pitch - roll + yaw;
-	int m3Out = thrust - pitch - roll - yaw;
-	int m4Out = thrust - pitch + roll + yaw;
+	t1 = thrust + pitch + roll - yaw;
+	t2 = thrust + pitch - roll + yaw;
+	t3 = thrust - pitch - roll - yaw;
+	t4 = thrust - pitch + roll + yaw;
 
-	m1Out = constrain(1000 + m1Out * 10, 1000, 2000);
-	m2Out = constrain(1000 + m2Out * 10, 1000, 2000);
-	m3Out = constrain(1000 + m3Out * 10, 1000, 2000);
-	m4Out = constrain(1000 + m4Out * 10, 1000, 2000);
+	t1 = constrain(1000 + t1 * 10, 1000, 2000);
+	t2 = constrain(1000 + t2 * 10, 1000, 2000);
+	t3 = constrain(1000 + t3 * 10, 1000, 2000);
+	t4 = constrain(1000 + t4 * 10, 1000, 2000);
 
-	writeESC(m1, m1Out);
-	writeESC(m2, m2Out);
-	writeESC(m3, m3Out);
-	writeESC(m4, m4Out);
+	writeESC(m1, t1);
+	writeESC(m2, t2);
+	writeESC(m3, t3);
+	writeESC(m4, t4);
 }

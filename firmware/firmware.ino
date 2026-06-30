@@ -21,6 +21,7 @@ typedef struct __attribute__((packed)) {
 	float gx, gy, gz, ax, ay, az; // imu data
 	float roll, pitch, yaw; // orientation
 	float x, y, z; // location
+	float m1, m2, m3, m4;
 } TelemetryPacket;
 
 typedef struct __attribute__((packed)) {
@@ -87,9 +88,11 @@ void loop () {
 		// State management
 		i = imu.getData();
 
-		estimate.updateState({i.gx, i.gy, i.gz}, 0.0f, actual_ms); 
-		Orientation o = estimate.getOrientation() * RAD_TO_DEG;
+		estimate.updateState({i.gx, i.gy, i.gz}, {i.ax, i.ay, i.az}, 0.0f, actual_ms); 
+		Vector3 o = estimate.getOrientation() * RAD_TO_DEG;
+		Vector3 p = estimate.getPosition();
 		
+		float rollCmd, pitchCmd, yawCmd;
 		// Handle drone states
 		switch (currentCommand.state) {
 			case IDLE: {
@@ -101,9 +104,9 @@ void loop () {
 				float yawSetPoint = currentCommand.yaw;
 				float thrust = currentCommand.thrust;
 
-				float rollCmd = rollController.updateLoop(o.x, rollSetPoint, 0.01);
-				float pitchCmd = pitchController.updateLoop(o.y, pitchSetPoint, 0.01);
-				float yawCmd = yawController.updateLoop(o.z, yawSetPoint, 0.01);
+				rollCmd = rollController.updateLoop(o.x, rollSetPoint, 0.01);
+				pitchCmd = pitchController.updateLoop(o.y, pitchSetPoint, 0.01);
+				yawCmd = yawController.updateLoop(o.z, yawSetPoint, 0.01);
 
 				drone.writeMotors(thrust, rollCmd, pitchCmd, yawCmd);
 				break;
@@ -118,17 +121,13 @@ void loop () {
 			packet_number,
 			t,
 			currentCommand.state,
-			i.gx,
-			i.gy,
-			i.gz,
-			i.ax,
-			i.ay,
-			i.az,
-			o.x,
-			o.y,
-			o.z,
-			0,0,0
+			i.gx, i.gy, i.gz,
+			i.ax, i.ay, i.az,
+			o.x, o.y, o.z,
+			p.x, p.y, p.z,
+			drone.t1, drone.t2, drone.t3, drone.t4
 		};
+
 		esp_now_send(broadcastAddress, (uint8_t*)&telem, sizeof(telem));
 		packet_number++;
 	}

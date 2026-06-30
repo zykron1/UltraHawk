@@ -1,13 +1,19 @@
-struct Orientation {
+struct Vector3 {
     float x, y, z;
-    Orientation operator*(float s) const { return {x*s, y*s, z*s}; }
-    Orientation& operator+=(const Orientation& o) { x+=o.x; y+=o.y; z+=o.z; return *this; }
+
+    Vector3 operator*(float s) const { return {x*s, y*s, z*s}; }
+    Vector3 operator+(const Vector3& o) const { return {x+o.x, y+o.y, z+o.z}; }
+    Vector3& operator+=(const Vector3& o) { x+=o.x; y+=o.y; z+=o.z; return *this; }
+    Vector3& operator*=(float s) { x*=s; y*=s; z*=s; return *this; }
+    Vector3& operator+=(float s) { x+=s; y+=s; z+=s; return *this; }
+    Vector3 operator+(float s) const { return {x+s, y+s, z+s}; }
 };
 
 class StateEstimator {
 public:
-    void updateState(Orientation gyro, float altitude, float elapsed_ms);
-    Orientation getOrientation(); // i use radians 
+    void updateState(Vector3 gyro, Vector3 accel,float altitude, float elapsed_ms);
+    Vector3 getOrientation(); // i use radians 
+	Vector3 getPosition();
 	float getAltitude();
 	float getVelocity();
 	void resetVelocity();
@@ -22,7 +28,10 @@ private:
 
 	bool _initialized = false;
 	float _lastAltitude = 0.0f;
-	float _velocity = 0.0f;
+	float _baro_velocity = 0.0f;
+
+	Vector3 _position;
+	Vector3 _velocity;
 
     void normalizeDCM();
 };

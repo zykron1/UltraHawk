@@ -10,6 +10,7 @@ class Drone {
 		void writeESC(int pin, uint16_t pulse_us);
 	public:
 		Drone(int p1, int p2, int p3, int p4) : m1(p1), m2(p2), m3(p3), m4(p4) {}
+		float t1, t2, t3, t4;
 		void initMotors();
 		void writeMotors(int thrust, int roll, int pitch, int yaw);
 };

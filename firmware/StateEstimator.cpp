@@ -1,44 +1,50 @@
 #include "StateEstimator.h"
 #include <math.h>
 
-void StateEstimator::updateState(Orientation gyro, float altitude, float elapsed_ms) {
+void StateEstimator::updateState(Vector3 gyro, Vector3 accel, float altitude, float elapsed_ms) {
     float dt = elapsed_ms / 1000.0f;
 
-	if (!_initialized) {
-        _lastAltitude = altitude;
-        _initialized  = true;
+    if (!_initialized) {
+        _position.z = altitude;
+        _initialized = true;
         return;
     }
 
-    _velocity = (altitude - _lastAltitude) / dt;
-    _lastAltitude = altitude;
+    _baro_velocity = (altitude - _position.z) / dt;
 
-    float wx = gyro.x * dt;
-    float wy = gyro.y * dt;
-    float wz = gyro.z * dt;
+    Vector3 w = gyro * dt;
 
     float dR[3][3] = {
-        { 1,  -wz,  wy},
-        { wz,   1, -wx},
-        {-wy,  wx,   1}
+        { 1,    -w.z,   w.y},
+        { w.z,   1,    -w.x},
+        {-w.y,   w.x,   1  }
     };
 
-    //R_new = R * dR
-	// credit to wikipedia for saving me
     float newR[3][3] = {};
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             for (int k = 0; k < 3; k++) {
                 newR[i][j] += R[i][k] * dR[k][j];
-			}	
-		}
-	}
+            }    
+        }
+    }
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             R[i][j] = newR[i][j];
 
     normalizeDCM();
+
+    Vector3 acc_world;
+    acc_world.x = R[0][0]*accel.x + R[0][1]*accel.y + R[0][2]*accel.z;
+    acc_world.y = R[1][0]*accel.x + R[1][1]*accel.y + R[1][2]*accel.z;
+    acc_world.z = R[2][0]*accel.x + R[2][1]*accel.y + R[2][2]*accel.z;
+
+    _velocity += acc_world * dt;
+    _position += _velocity * dt;
+
+    float z_err = altitude - _position.z;
+    //_position.z += z_err * 0.05f;
 }
 
 void StateEstimator::normalizeDCM() {
@@ -72,17 +78,21 @@ void StateEstimator::normalizeDCM() {
     R[2][0]=zo[0]; R[2][1]=zo[1]; R[2][2]=zo[2];
 }
 
-Orientation StateEstimator::getOrientation() {
+Vector3 StateEstimator::getOrientation() {
     float roll = atan2f(R[2][1], R[2][2]);
     float pitch = asinf(-R[2][0]);
     float yaw = atan2f(R[1][0], R[0][0]);
     return {roll, pitch, yaw};  // x=roll, y=pitch, z=yaw
 }
 
+Vector3 StateEstimator::getPosition(){
+	return {_position};
+}
+
 float StateEstimator::getAltitude() { return _lastAltitude; }
-float StateEstimator::getVelocity() { return _velocity; }
+float StateEstimator::getVelocity() { return _baro_velocity; }
 
 void StateEstimator::resetVelocity() {
-    _velocity = 0.0f;
+    _baro_velocity = 0.0f;
 	_initialized = false;
 }
